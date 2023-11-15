@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+body * {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
@@ -24,10 +28,15 @@ body {
 }
 
 .left-login > h1 {
+    font-size: 3vw;
     color: #77ffc0;
 }
 
-.left-login {
+.left-image {
+    width: 35vh;
+}
+
+.right-login {
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -99,4 +108,39 @@ body {
     color: #2b134b;
     background: #00ff88;
     box-shadow: 0 10px 40px -12px #00ff8052;  
+}
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login > h1 {
+        display: none;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+
 }
